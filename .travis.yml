@@ -1,0 +1,22 @@
+dist: trusty
+
+sudo: required
+
+services:
+  - docker
+
+git:
+  depth: 3
+
+before_install:
+  - docker --version
+
+script:
+  - docker build --tag alcohol/www:latest .
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_PASSWORD
+      docker push alcohol/www:latest
+      docker logout
+    fi
