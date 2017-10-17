@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+  .container {
+    max-width: 900px;
+    padding: 2em 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: .5em;
+  }
+}
+
+.container > div.text-xs-center a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container div > p {
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.container > div > a.btn {
+  margin-left: .35em;
+  margin-right: .35em;
+}
+
+.container > div > img {
+  margin: .5em 2em;
+  width: 200px;
+  height: 200px;
+}
