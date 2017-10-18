@@ -2,7 +2,7 @@ FROM nginx:mainline-alpine
 
 LABEL traefik.enable=true
 LABEL traefik.backend=www.robbast.nl
-LABEL traefik.frontend.rule=Host:www.robbast.nl
+LABEL traefik.frontend.rule=Host:www.robbast.nl,robbast.nl
 LABEL traefik.port=8000
 LABEL traefik.docker.network=traefik
 
