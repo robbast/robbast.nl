@@ -16,4 +16,5 @@ RUN touch /var/run/nginx.pid \
  && chmod 700 /srv \
  && chmod 600 /srv/*
 
+EXPOSE 8000
 USER nginx
