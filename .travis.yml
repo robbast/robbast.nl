@@ -15,7 +15,7 @@ script:
   - docker build --tag alcohol/www:latest .
 
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+  - if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_PULL_REQUEST" == "false" ]; then
       docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_PASSWORD;
       docker push alcohol/www:latest;
       docker logout;
