@@ -4,9 +4,8 @@ COPY --from=nginx:mainline-alpine / /
 
 LABEL traefik.enable=true
 LABEL traefik.backend=www.robbast.nl
-LABEL traefik.frontend.rule=Host:www.robbast.nl,robbast.nl
+LABEL traefik.frontend.rule=Host:www.robbast.nl,robbast.nl,www.robbast.eu,robbast.eu,www.robbast.xyz,robbast.xyz
 LABEL traefik.port=8000
-LABEL traefik.docker.network=traefik
 
 WORKDIR /srv
 
