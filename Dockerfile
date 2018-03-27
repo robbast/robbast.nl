@@ -7,6 +7,10 @@ LABEL traefik.backend=www.robbast.nl
 LABEL traefik.frontend.rule=Host:www.robbast.nl,robbast.nl,www.robbast.eu,robbast.eu,www.robbast.xyz,robbast.xyz
 LABEL traefik.port=8000
 
+RUN apk add --no-cache curl
+HEALTHCHECK --interval=1m --timeout=3s \
+ CMD curl --fail --head http://localhost:8000/index.html || exit 1
+
 WORKDIR /srv
 
 COPY ["nginx.conf", "/etc/nginx/"]
