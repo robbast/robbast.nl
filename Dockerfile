@@ -22,7 +22,7 @@ RUN touch /var/run/nginx.pid \
  && chmod 600 /srv/*
 
 STOPSIGNAL SIGTERM
-EXPOSE 8000
+EXPOSE 8000/tcp
 USER nginx
 
 CMD ["nginx", "-g", "daemon off;"]
