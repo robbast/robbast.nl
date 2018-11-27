@@ -1,0 +1,7 @@
+# automatically mark text files
+* text=auto
+
+*.asc diff=astextplain
+*.pdf diff=astextplain
+*.png binary
+*.jpg binary
