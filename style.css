@@ -1,8 +1,85 @@
 html {
-  font-size: 1.2rem;
+  font: 300 1.125em/1.5 "Roboto Slab", Palatino, serif; /* [1] */
+  text-align: center;
+  height: 100vh;
 }
 
-img.portrait {
-  width: 200px;
-  height: 200px;
+body {
+  min-height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url('photo.min.jpg');
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
+}
+
+@media (min-width: 800px) {
+  html {
+    background-image: url('photo.jpg');
+  }
+}
+
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr {
+  margin-bottom: 1.5rem;
+}
+
+section {
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+section::last {
+  margin-bottom: 0;
+}
+
+a {
+  border-bottom: 4px solid rgba(255, 255, 255, 0);
+  color: #c00;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+}
+
+a:before, a:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 0px;
+  height: 5px;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.2s;
+  opacity: 0;
+}
+
+a:before {
+  left: calc(50%);
+  background-color: #c00;
+}
+
+a:after {
+  right: calc(50%);
+  background-color: #c00;
+}
+
+a:hover:before, a:hover:after {
+  width: 50%;
+  opacity: 1;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.break {
+  display: block !important
 }
