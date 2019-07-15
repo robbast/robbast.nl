@@ -28,12 +28,7 @@ pre,table,fieldset,hr {
   margin-bottom: 1.5rem;
 }
 
-section {
-  padding: 0 1rem;
-  margin-bottom: 2rem;
-}
-
-section::last {
+section:last-of-type {
   margin-bottom: 0;
 }
 
