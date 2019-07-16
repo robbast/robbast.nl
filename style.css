@@ -64,7 +64,7 @@ a:after {
   background-color: #c00;
 }
 
-a:hover:before, a:hover:after {
+a:hover:before, a:hover:after, a:focus:before, a:focus:after {
   width: 50%;
   opacity: 1;
 }
