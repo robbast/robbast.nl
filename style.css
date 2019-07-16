@@ -9,6 +9,7 @@ html {
 
 body {
   min-height: 100vh;
+  background-color: #f9f9f9;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
