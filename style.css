@@ -20,7 +20,7 @@ body {
 }
 
 @media (min-width: 800px) {
-  html {
+  body {
     background-image: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url('photo.jpg');
   }
 }
