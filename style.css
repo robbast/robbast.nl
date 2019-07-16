@@ -25,11 +25,13 @@ body {
   }
 }
 
-h1,h2,h3,h4,h5,h6,hgroup,
-ul,ol,dd,
-p,figure,
-pre,table,fieldset,hr {
-  margin-bottom: 1.5rem;
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, p, figure, pre, table, fieldset, hr, section {
+  margin: 0 0 1.5rem 0;
+}
+
+h2 {
+  font-weight: 300;
+  font-style: italic;
 }
 
 section:last-of-type {
